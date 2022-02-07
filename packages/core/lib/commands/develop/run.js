@@ -1,5 +1,4 @@
 const emoji = require("node-emoji");
-const mnemonicInfo = require("../../mnemonics/mnemonic");
 
 const runConsole = async (config, ganacheOptions) => {
   const Console = require("../../console");
@@ -23,6 +22,7 @@ const runConsole = async (config, ganacheOptions) => {
 module.exports = async options => {
   const { Develop } = require("@truffle/environment");
   const Config = require("@truffle/config");
+  const mnemonicInfo = require("../../mnemonics/mnemonic");
 
   const config = Config.detect(options);
   const customConfig = config.networks.develop || {};
